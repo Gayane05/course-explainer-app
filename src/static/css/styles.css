@@ -22,6 +22,17 @@ p { line-height:1.6; color:#444; }
 .container ul { padding-left:20px; }
 .container ul li a { color:#2a6fb6; }
 
+/* contact page */
+.contact-details { margin-bottom: 24px; }
+.contact-details h2, .social-section h2 { font-size: 20px; margin-bottom: 12px; }
+.contact-label { font-weight: 600; }
+.contact-details address { font-style: normal; line-height: 1.6; color: #444; }
+.section-divider { border: none; border-top: 1px solid #e0e0e0; margin: 28px 0; }
+.social-links { list-style: none; padding: 0; display: flex; gap: 16px; flex-wrap: wrap; }
+.social-links li { margin: 0; }
+.social-links a { color: #2a6fb6; font-weight: 600; text-decoration: none; }
+.social-links a:hover { text-decoration: underline; }
+
 /* footer */
 .site-footer { max-width:1000px; margin:18px auto; padding:8px 20px; color:#555; font-size:13px; }
 
