@@ -3,12 +3,27 @@
 {% block title %}Course Explainer{% endblock %}
 
 {% block content %}
-<h1>Welcome to the Course Explainer</h1>
-<p>This application provides an overview of various courses available.</p>
-<h2>Available Courses</h2>
-<ul>
-    <li><a href="{{ url_for('course', course_id=1) }}">Course 1</a></li>
-    <li><a href="{{ url_for('course', course_id=2) }}">Course 2</a></li>
-    <li><a href="{{ url_for('course', course_id=3) }}">Course 3</a></li>
-</ul>
+<section class="hero">
+  <h1 class="hero__title">Explore Our Courses</h1>
+  <p class="hero__subtitle">Discover curated learning paths taught by expert instructors.</p>
+</section>
+
+<section>
+  <h2 class="section-heading">Available Courses</h2>
+  <div class="courses-grid">
+    {% for course in courses %}
+    <a class="course-card" href="{{ url_for('course', course_id=loop.index) }}">
+      <div class="course-card__accent"></div>
+      <div class="course-card__body">
+        <h3 class="course-card__title">{{ course.title }}</h3>
+        <p class="course-card__desc">{{ course.description }}</p>
+        <div class="course-card__meta">
+          <span class="course-card__instructor">{{ course.instructor }}</span>
+          <span class="course-card__duration">{{ course.duration }}</span>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
 {% endblock %}
